@@ -1,0 +1,34 @@
+*[_type == "recipe"] {
+    name,
+    type -> {
+        name
+    },
+    image {
+        asset -> {
+            url
+        }
+    },
+
+    foods[] -> {
+        name,
+        short_description,
+        image {
+            asset -> {
+                url
+            }
+        },
+
+        nationality -> {
+            name
+        },
+
+        ecologicScores[]{
+            groceryStore -> {
+                name
+            },
+            score,
+            price
+        }
+       
+    }
+}
